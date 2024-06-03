@@ -482,6 +482,51 @@ img {
   .card-screen .card__left-part .default-btn {
     margin-bottom: 120px;
   }
+  .application-tools {
+    height: auto;
+    justify-content: flex-start;
+  }
+  .application-tools .application-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  .application-tools .tool-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+  }
+  .application-tools .tool-container__tools {
+    width: 100%;
+    padding-bottom: 3rem;
+  }
+  .application-tools .tool-container__tools:not(:last-child) {
+    border-bottom: 1px solid #6F7279;
+  }
+  .application-tools .tool-container__tools--title {
+    font-size: 20px;
+    padding-bottom: 1.5rem;
+  }
+  .application-tools .tool-container__tools--description {
+    font-size: 14px;
+    width: 100%;
+  }
+  .application-tools__load-more {
+    margin-bottom: 24px;
+  }
+  .footer__get-in-touch {
+    margin-top: 26px;
+    font-size: 24px;
+  }
+  .footer__email-button {
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__email-button--email {
+    font-size: 14px;
+    margin-bottom: 36px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
