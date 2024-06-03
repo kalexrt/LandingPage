@@ -94,7 +94,6 @@
 .nav-bar {
   background-color: var(--background-color);
   width: 100%;
-  height: 5.5 rem;
   display: flex;
   padding: 1.5rem 0;
   justify-content: space-around;
