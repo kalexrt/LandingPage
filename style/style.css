@@ -73,8 +73,8 @@ img {
   aspect-ratio: 1;
   width: 24px;
   cursor: pointer;
-  transform: scale(1);
   filter: invert(var(--invert));
+  transform: scale(1);
   transition: 0.8s;
 }
 .default-icon:hover {
@@ -121,11 +121,13 @@ img {
   right: 16%;
   height: 40px;
   width: 40px;
+  cursor: pointer;
   transform: scale(1);
+  transition: 0.8s;
+  transition: 0s;
 }
 .nav-bar__right-section__nav-list .theme-toggle--button:hover {
   transform: scale(1.1);
-  cursor: pointer;
 }
 .nav-bar__right-section__nav-list .item--moon {
   visibility: var(--moon-visible);
@@ -138,7 +140,7 @@ img {
 .nav-bar__right-section__nav-list .mobile--item {
   border-radius: 29px;
   padding: 0.4em 1.5em;
-  background: #F2F2F7;
+  background: var(--secondary-background);
   visibility: hidden;
 }
 
@@ -168,6 +170,7 @@ img {
 }
 .intro-screen__description {
   width: 40%;
+  color: var(--secondary-text-color);
   margin: 0px 15%;
   text-align: center;
   line-height: 192%;
@@ -192,6 +195,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(1);
+  transition: 0.8s;
+}
+.intro-screen__button-container--download-cv:hover {
+  transform: scale(1.1);
 }
 .intro-screen__button-container--download-cv .default-text {
   cursor: pointer;
@@ -258,6 +266,7 @@ img {
 .card-screen .card__left-part--name-icon .main-icon {
   aspect-ratio: 1;
   height: 48px;
+  margin-right: 2rem;
 }
 .card-screen .card__left-part--name-icon .left-part-name {
   font-size: 36px;
@@ -343,8 +352,9 @@ img {
   letter-spacing: 0.079px;
   border-radius: 43px;
   background-color: var(--secondary-background);
-  transition: 0.8s;
   cursor: pointer;
+  transform: scale(1);
+  transition: 0.8s;
 }
 .application-tools__load-more:hover {
   transform: scale(1.1);
@@ -379,6 +389,99 @@ img {
 .footer__link-container {
   margin: 0;
   padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 575px) {
+  .nav-bar__right-section__nav-list {
+    visibility: visible;
+  }
+  .nav-bar__right-section .mobile--item {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 575px) {
+  .header {
+    position: relative;
+  }
+  .nav-bar {
+    margin: 0;
+    padding: 1.1rem 0;
+  }
+  .nav-bar__right-section__nav-list {
+    visibility: hidden;
+  }
+  .nav-bar__right-section .theme-toggle--button {
+    left: 12px;
+    top: 0;
+  }
+  .nav-bar__right-section .mobile--item {
+    visibility: visible;
+    position: absolute;
+    right: 0;
+    top: 4px;
+  }
+  .intro-screen {
+    height: calc(100vh - 4rem);
+  }
+  .intro-screen__greeting {
+    font-size: 16px;
+  }
+  .intro-screen__position {
+    font-size: 24px;
+  }
+  .intro-screen__description {
+    font-size: 14px;
+    width: 90%;
+  }
+  .intro-screen__button-container {
+    font-size: 14px;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .intro-screen__button-container .default-btn {
+    width: 170px;
+  }
+  .intro-screen__button-container .default-text {
+    width: 100px;
+  }
+  .card-screen {
+    height: auto;
+  }
+  .card-screen .card {
+    flex-wrap: wrap;
+    width: 200%;
+  }
+  .card-screen .card__right-image {
+    width: 100%;
+  }
+  .card-screen .card__right-image .image-modifier {
+    object-fit: cover;
+    height: 280px;
+  }
+  .card-screen .card__left-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    position: relative;
+  }
+  .card-screen .card__left-part--type-icon {
+    position: absolute;
+    top: -270px;
+    left: 20px;
+  }
+  .card-screen .card__left-part--name-icon {
+    align-items: center;
+  }
+  .card-screen .card__left-part .left-part-name {
+    font-size: 24px;
+  }
+  .card-screen .card__left-part--description {
+    font-size: 14px;
+  }
+  .card-screen .card__left-part .default-btn {
+    margin-bottom: 120px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

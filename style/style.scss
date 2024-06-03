@@ -37,6 +37,13 @@ $transition-delay: .8s;
     padding: 0;
     box-sizing: border-box;
 }
+@mixin hoverBig{
+    transform: scale(1);
+    transition: $transition-delay;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
 body{
     font-family: $default-font;
     background-color: var(--background-color);
@@ -52,7 +59,7 @@ img{
 }
 
 .header{
-    position: sticky;
+    position:sticky;
     top: 0;
     left: 0;
 }
@@ -71,23 +78,15 @@ img{
     font-weight: 500;
     cursor: pointer;
     width: 160px;
-    transform: scale(1);
-    transition: $transition-delay;
-    &:hover{
-        transform: scale(1.1);
-    }
+    @include hoverBig();
 }
 
 .default-icon{
     aspect-ratio: 1;
     width: 24px;
     cursor: pointer;
-    transform: scale(1);
     filter: invert(var(--invert));
-    transition: $transition-delay;
-    &:hover{
-        transform: scale(1.1);
-    }
+    @include hoverBig();
 }
 
 .nav-bar{
@@ -123,11 +122,9 @@ img{
                 right:16%;
                 height: 40px;
                 width: 40px;
-                transform: scale(1);
-                &:hover{
-                    transform: scale(1.1);
-                    cursor: pointer;
-                }
+                cursor: pointer;
+                @include hoverBig();
+                transition: 0s;
             }
             .item--moon{
                 visibility: var(--moon-visible);
@@ -140,7 +137,7 @@ img{
             .mobile--item{
                 border-radius: 29px;
                 padding: 0.4em 1.5em;
-                background: #F2F2F7;
+                background: var(--secondary-background);
                 visibility: hidden;
             }
         }
@@ -171,6 +168,7 @@ img{
     }
     &__description{
         width: 40%;
+        color: var(--secondary-text-color);
         margin: 0px 15%;
         text-align: center;
         line-height: 192%;
@@ -190,7 +188,7 @@ img{
         }
         &--download-cv{
             @include flexCenter();
-
+            @include hoverBig();
             .default-text{
                 cursor: pointer;
                 margin-left: 4px;
@@ -249,6 +247,7 @@ img{
                 .main-icon{
                     aspect-ratio: 1;
                     height: 48px;
+                    margin-right: 2rem;
                 }
                 .left-part-name{
                     font-size: 36px;
@@ -331,11 +330,8 @@ img{
         letter-spacing: 0.079px;
         border-radius: 43px;
         background-color: var(--secondary-background);
-        transition: $transition-delay;
         cursor: pointer;
-        &:hover{
-            transform: scale(1.1);
-        }
+        @include hoverBig();
     }
 }
 
@@ -367,4 +363,112 @@ img{
         margin: 0;
         padding-bottom: 3rem;
     }
+}
+@media screen and (min-width:575px) {
+    .nav-bar{
+     &__right-section{
+         &__nav-list{
+             visibility: visible;
+         }
+         .mobile--item{
+            visibility: hidden;
+         }
+     }
+    }
+ }
+
+//  for mobile phones
+@media screen and (max-width:575px) {
+    // navigation bar
+    .header{
+        position: relative;
+    }
+   .nav-bar{
+    margin: 0;
+    padding: 1.1rem 0;
+    &__right-section{
+        &__nav-list{
+            visibility: hidden;
+        }
+        .theme-toggle--button{
+            left: 12px;
+            top:0;
+        }
+        .mobile--item{
+            visibility: visible;
+            position: absolute;
+            right: 0;
+            top: 4px;
+        }
+    }
+   }
+// first screen
+   .intro-screen{
+    height: calc(100vh - 4rem);
+    &__greeting{
+        font-size: 16px;
+    }
+    &__position{
+        font-size: 24px;
+    }
+    &__description{
+        font-size: 14px;
+        width: 90%;
+    }
+    &__button-container{
+        font-size: 14px;
+        flex-direction: column;
+        gap: 1.5rem;
+        .default-btn{
+            width: 170px;
+        }
+        .default-text{
+            width: 100px;
+        }
+    }
+   }
+
+//    card screens
+   .card-screen{
+    height: auto;
+        .card{
+            flex-wrap: wrap;
+            width: 200%;
+            &__right-image{
+                width: 100%;
+                .image-modifier{
+                    object-fit: cover;
+                    height: 280px;
+                }
+            }
+
+            &__left-part{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                position: relative;
+                &--type-icon{
+                    position: absolute;
+                    top: -270px;
+                    left: 20px;
+                }
+                &--name-icon{
+                    align-items: center;
+                }
+                .left-part-name{
+                    font-size: 24px;
+                }
+                &--description{
+                    font-size: 14px;
+                }
+                .default-btn{
+                    margin-bottom: 120px;
+                }
+            }
+        }
+    }
+
+    //application and tools
+    
 }
