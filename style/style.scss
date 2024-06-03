@@ -13,11 +13,12 @@ $transition-delay: .8s;
     justify-content:center;
     align-items: center;
 }
-
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
     font-family: $default-font;
     background-color: $background-color;
     color: $primary-text-color;
@@ -36,11 +37,34 @@ img{
     left: 0;
 }
 
+.default-btn{
+    background-color: $button-color;
+    color: white;
+    text-align: center;
+    outline: none;
+    border: none;
+    height: 40px;
+    border-radius: 2.7rem;
+    font-family: $special-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    cursor: pointer;
+    width: 160px;
+}
+
+.default-icon{
+    aspect-ratio: 1;
+    width: 24px;
+    cursor: pointer;
+}
+
 .nav-bar{
     background-color: $background-color;
     width: 100%;
     height: 5.5 rem;
     display:flex;
+    padding: 1.5rem 0;
     justify-content: space-around;
     &__left-section{
         @include flexCenter();
@@ -89,13 +113,14 @@ img{
 }
 
 .intro-screen{
-    height: calc(100vh - 5.6rem);
+    // height: calc(100vh - 5.6rem);
     @include flexCenter();
     flex-direction: column;
     &__picture{
         margin-top: 4rem;
         aspect-ratio: 1;
         height: 64px;
+        margin-bottom: 1rem;
     }
     &__greeting{
         font-size: 24px;
@@ -107,6 +132,7 @@ img{
         font-weight: 800;
         font-size: 60px;
         text-align: center;
+        margin-bottom: 1rem;
     }
     &__description{
         width: 40%;
@@ -141,26 +167,84 @@ img{
         width: 275px;
         @include flexCenter();
         justify-content: space-between;
+        margin-bottom: 4rem;
     }
 }
 
-.default-btn{
-    background-color: $button-color;
-    color: white;
-    text-align: center;
-    outline: none;
-    border: none;
-    height: 40px;
-    border-radius: 2.7rem;
-    font-family: $special-font;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    cursor: pointer;
+.card-screen{
+    background-color: $secondary-background;
+    width: 100%;
+    height: calc(105vh - 5.6rem);
+    @include flexCenter();
+    .card{
+        height: 80%;
+        width: 80%;
+        background-color: $background-color;
+        @include flexCenter();
+        flex-direction: row-reverse;
+
+        &__right-image{
+            height: 100%;
+            width: 120%;
+            object-fit: contain;
+        }
+        &__left-part{
+            padding-left: 5rem;
+            &--type-icon{
+                background-color: $secondary-background;
+                @include flexCenter();
+                width: 134px;
+                height: 31px;
+                border-radius: 28px;
+
+                .genre-icon{
+                    aspect-ratio: 1;
+                    width: 24px;
+                }
+                .genre-text{
+                    margin-left: 10px;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                }
+            }
+            &--name-icon{
+                display: flex;
+                margin-top: 12px;
+                .main-icon{
+                    aspect-ratio: 1;
+                    height: 48px;
+                }
+                .left-part-name{
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 700;
+                }
+            }
+            &--description{
+                @include flexCenter();
+                margin-top: 12px;
+                width: 80%;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 190.4%; /* 34.272px */
+                letter-spacing: 0.09px;
+            }
+            &__links-bar{
+                display: flex;
+                margin-top: 2.6rem;
+                justify-content: space-between;
+
+                &--default-logo{
+                    height: 24px;
+                    width: 24px;
+                }
+            }
+            .default-btn{
+                margin-top: 2.6rem;
+            }
+        }
+    }
 }
 
-.default-icon{
-    aspect-ratio: 1;
-    width: 24px;
-    cursor: pointer;
-}
