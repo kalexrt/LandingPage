@@ -3,6 +3,11 @@
   --secondary-background:#F2F2F7;
   --primary-text-color:#000000;
   --secondary-text-color: #2C2C2E;
+  --moon-visible:visible;
+  --sun-visible:hidden;
+  --moon-pointer:all;
+  --sun-pointer:none;
+  --invert:0%;
 }
 
 .dark {
@@ -10,6 +15,11 @@
   --secondary-background:#282C34;
   --primary-text-color:#FFFFFF;
   --secondary-text-color:#D9D9D9;
+  --moon-visible:hidden;
+  --sun-visible:visible;
+  --moon-pointer:none;
+  --sun-pointer:all;
+  --invert:100%;
 }
 
 * {
@@ -64,6 +74,7 @@ img {
   width: 24px;
   cursor: pointer;
   transform: scale(1);
+  filter: invert(var(--invert));
   transition: 0.8s;
 }
 .default-icon:hover {
@@ -111,14 +122,18 @@ img {
   height: 40px;
   width: 40px;
   transform: scale(1);
-  transition: 0.8s;
 }
 .nav-bar__right-section__nav-list .theme-toggle--button:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
+.nav-bar__right-section__nav-list .item--moon {
+  visibility: var(--moon-visible);
+  pointer-events: var(--moon-pointer);
+}
 .nav-bar__right-section__nav-list .item--sun {
-  visibility: hidden;
+  visibility: var(--sun-visible);
+  pointer-events: var(--sun-pointer);
 }
 .nav-bar__right-section__nav-list .mobile--item {
   border-radius: 29px;

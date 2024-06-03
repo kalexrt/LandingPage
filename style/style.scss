@@ -3,6 +3,11 @@
     --secondary-background:#F2F2F7;
     --primary-text-color:#000000;
     --secondary-text-color: #2C2C2E;
+    --moon-visible:visible;
+    --sun-visible:hidden;
+    --moon-pointer:all;
+    --sun-pointer:none;
+    --invert:0%;
 }
 
 $default-font:Montserrat;
@@ -16,6 +21,11 @@ $transition-delay: .8s;
     --secondary-background:#282C34;
     --primary-text-color:#FFFFFF;
     --secondary-text-color:#D9D9D9;
+    --moon-visible:hidden;
+    --sun-visible:visible;
+    --moon-pointer:none;
+    --sun-pointer:all;
+    --invert:100%;
 }
 @mixin flexCenter{
     display:flex;
@@ -73,6 +83,7 @@ img{
     width: 24px;
     cursor: pointer;
     transform: scale(1);
+    filter: invert(var(--invert));
     transition: $transition-delay;
     &:hover{
         transform: scale(1.1);
@@ -113,14 +124,18 @@ img{
                 height: 40px;
                 width: 40px;
                 transform: scale(1);
-                transition: $transition-delay;
                 &:hover{
                     transform: scale(1.1);
                     cursor: pointer;
                 }
             }
+            .item--moon{
+                visibility: var(--moon-visible);
+                pointer-events: var(--moon-pointer);
+            }
             .item--sun{
-                visibility: hidden;
+                visibility: var(--sun-visible);
+                pointer-events: var(--sun-pointer);
             }
             .mobile--item{
                 border-radius: 29px;

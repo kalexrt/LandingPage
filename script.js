@@ -1,7 +1,12 @@
-let a = document.querySelector('.theme-toggle--button')
-console.log(a)
+let a = document.querySelector('.item--moon')
+let b = document.querySelector('.item--sun')
+
 a.addEventListener('click',()=>{
     document.body.classList.toggle('dark')
     console.log(document.body.classList)
-    console.log('click')
 })
+b.addEventListener('click',()=>{
+    document.body.classList.toggle('dark')
+    console.log(document.body.classList)
+})
+
