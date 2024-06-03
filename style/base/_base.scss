@@ -1,0 +1,37 @@
+.dark{
+    --background-color:#050519;
+    --secondary-background:#282C34;
+    --primary-text-color:#FFFFFF;
+    --secondary-text-color:#D9D9D9;
+    --moon-visible:hidden;
+    --sun-visible:visible;
+    --moon-pointer:none;
+    --sun-pointer:all;
+    --invert:100%;
+}
+
+
+.default-btn{
+    background-color: $button-color;
+    color: white;
+    text-align: center;
+    outline: none;
+    border: none;
+    height: 40px;
+    border-radius: 2.7rem;
+    font-family: $special-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    cursor: pointer;
+    width: 160px;
+    @include hoverBig();
+}
+
+.default-icon{
+    aspect-ratio: 1;
+    width: 24px;
+    cursor: pointer;
+    filter: invert(var(--invert));
+    @include hoverBig();
+}

@@ -1,0 +1,12 @@
+@mixin flexCenter{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+@mixin hoverBig{
+    transform: scale(1);
+    transition: $transition-delay;
+    &:hover{
+        transform: scale(1.1);
+    }
+}

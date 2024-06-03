@@ -1,0 +1,22 @@
+.footer{
+    width: 100%;
+    background-color: var(--secondary-background);
+    padding:0 10%;
+    &__get-in-touch{
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 172.687%; /* 69.075px */
+        letter-spacing: 0.2px;
+    }
+    &__email-button{
+        @include flexCenter();
+        justify-content: space-between;
+        padding-bottom: 2rem;
+    }
+    &__link-container{
+        @extend .intro-screen__link-container;
+        margin: 0;
+        padding-bottom: 3rem;
+    }
+}

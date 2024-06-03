@@ -1,0 +1,311 @@
+@media screen and (min-width:575px) {
+    .nav-bar{
+     &__right-section{
+         &__nav-list{
+             visibility: visible;
+         }
+         .mobile--item{
+            visibility: hidden;
+         }
+     }
+    }
+ }
+
+//  for mobile phones
+@media screen and (max-width:575px) {
+    // navigation bar
+    .header{
+        position: relative;
+    }
+   .nav-bar{
+    margin: 0;
+    padding: 1.1rem 0;
+    &__right-section{
+        &__nav-list{
+            visibility: hidden;
+        }
+        .theme-toggle--button{
+            left: 12px;
+            top:0;
+        }
+        .mobile--item{
+            visibility: visible;
+            position: absolute;
+            right: 0;
+            top: 4px;
+        }
+    }
+   }
+// first screen
+   .intro-screen{
+    height: calc(100vh - 4rem);
+    &__greeting{
+        font-size: 16px;
+    }
+    &__position{
+        font-size: 24px;
+    }
+    &__description{
+        font-size: 14px;
+        width: 90%;
+    }
+    &__button-container{
+        font-size: 14px;
+        flex-direction: column;
+        gap: 1.5rem;
+        .default-btn{
+            width: 170px;
+        }
+        .default-text{
+            width: 100px;
+        }
+    }
+   }
+
+//    card screens
+   .card-screen{
+    height: auto;
+        .card{
+            flex-wrap: wrap;
+            width: 200%;
+            &__right-image{
+                width: 100%;
+                .image-modifier{
+                    object-fit: cover;
+                    height: 280px;
+                }
+            }
+
+            &__left-part{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                position: relative;
+                &--type-icon{
+                    position: absolute;
+                    top: -270px;
+                    left: 20px;
+                }
+                &--name-icon{
+                    align-items: center;
+                }
+                .left-part-name{
+                    font-size: 24px;
+                }
+                &--description{
+                    font-size: 14px;
+                }
+                .default-btn{
+                    margin-bottom: 120px;
+                }
+            }
+        }
+    }
+
+    //application and tools
+    .application-tools{
+
+        height: auto;
+        justify-content: flex-start;
+        .application-title{
+            font-size: 24px;
+            margin-bottom: 40px
+        }
+        .tool-container{
+            @include flexCenter();
+            flex-flow: column wrap;
+            &__tools{
+                width: 100%;
+                padding-bottom: 3rem;
+                &:not(:last-child){
+                    border-bottom: 1px solid #6F7279;
+                }
+                &--title{
+                    font-size: 20px;
+                    padding-bottom: 1.5rem;
+
+                }
+                &--description{
+                    font-size: 14px;
+                    width: 100%;
+                }
+            }
+        }
+        &__load-more{
+            margin-bottom: 24px;
+        }
+    }
+
+    //footer section
+    .footer{
+        &__get-in-touch{
+            margin-top: 26px;
+            font-size: 24px;
+        }
+        &__email-button{
+            margin-top: 1rem;
+            flex-direction: column;
+            align-items: flex-start;
+            &--email{
+                font-size: 14px;
+                margin-bottom: 36px;
+            }
+        }
+    }
+}@media screen and (min-width:575px) {
+    .nav-bar{
+     &__right-section{
+         &__nav-list{
+             visibility: visible;
+         }
+         .mobile--item{
+            visibility: hidden;
+         }
+     }
+    }
+ }
+
+//  for mobile phones
+@media screen and (max-width:575px) {
+    // navigation bar
+    .header{
+        position: relative;
+    }
+   .nav-bar{
+    margin: 0;
+    padding: 1.1rem 0;
+    &__right-section{
+        &__nav-list{
+            visibility: hidden;
+        }
+        .theme-toggle--button{
+            left: 12px;
+            top:0;
+        }
+        .mobile--item{
+            visibility: visible;
+            position: absolute;
+            right: 0;
+            top: 4px;
+        }
+    }
+   }
+// first screen
+   .intro-screen{
+    height: calc(100vh - 4rem);
+    &__greeting{
+        font-size: 16px;
+    }
+    &__position{
+        font-size: 24px;
+    }
+    &__description{
+        font-size: 14px;
+        width: 90%;
+    }
+    &__button-container{
+        font-size: 14px;
+        flex-direction: column;
+        gap: 1.5rem;
+        .default-btn{
+            width: 170px;
+        }
+        .default-text{
+            width: 100px;
+        }
+    }
+   }
+
+//    card screens
+   .card-screen{
+    height: auto;
+        .card{
+            flex-wrap: wrap;
+            width: 200%;
+            &__right-image{
+                width: 100%;
+                .image-modifier{
+                    object-fit: cover;
+                    height: 280px;
+                }
+            }
+
+            &__left-part{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                position: relative;
+                &--type-icon{
+                    position: absolute;
+                    top: -270px;
+                    left: 20px;
+                }
+                &--name-icon{
+                    align-items: center;
+                }
+                .left-part-name{
+                    font-size: 24px;
+                }
+                &--description{
+                    font-size: 14px;
+                }
+                .default-btn{
+                    margin-bottom: 120px;
+                }
+            }
+        }
+    }
+
+    //application and tools
+    .application-tools{
+
+        height: auto;
+        justify-content: flex-start;
+        .application-title{
+            font-size: 24px;
+            margin-bottom: 40px
+        }
+        .tool-container{
+            @include flexCenter();
+            flex-flow: column wrap;
+            &__tools{
+                width: 100%;
+                padding-bottom: 3rem;
+                &:not(:last-child){
+                    border-bottom: 1px solid #6F7279;
+                }
+                &--title{
+                    font-size: 20px;
+                    padding-bottom: 1.5rem;
+
+                }
+                &--description{
+                    font-size: 14px;
+                    width: 100%;
+                }
+            }
+        }
+        &__load-more{
+            margin-bottom: 24px;
+        }
+    }
+
+    //footer section
+    .footer{
+        &__get-in-touch{
+            margin-top: 26px;
+            font-size: 24px;
+        }
+        &__email-button{
+            margin-top: 1rem;
+            flex-direction: column;
+            align-items: flex-start;
+            &--email{
+                font-size: 14px;
+                margin-bottom: 36px;
+            }
+        }
+    }
+}

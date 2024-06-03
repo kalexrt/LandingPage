@@ -1,0 +1,59 @@
+.intro-screen{
+    // height: calc(100vh - 5.6rem);
+    @include flexCenter();
+    flex-direction: column;
+    &__picture{
+        margin-top: 4rem;
+        aspect-ratio: 1;
+        height: 64px;
+        margin-bottom: 1rem;
+    }
+    &__greeting{
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    &__position{
+        align-items: center;
+        font-weight: 800;
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    &__description{
+        width: 40%;
+        color: var(--secondary-text-color);
+        margin: 0px 15%;
+        text-align: center;
+        line-height: 192%;
+        &--link{
+            cursor: pointer;
+            color: $button-color;
+            text-decoration: underline;
+        }
+    }
+    &__button-container{
+        margin-top: 3rem;
+        @include flexCenter();
+        width:20%;
+        justify-content: space-between;
+        .default-btn{
+            width: 45%;
+        }
+        &--download-cv{
+            @include flexCenter();
+            @include hoverBig();
+            .default-text{
+                cursor: pointer;
+                margin-left: 4px;
+            }
+        }
+    }
+    &__link-container{
+        margin-top: 2.5rem;
+        width: 275px;
+        @include flexCenter();
+        justify-content: space-between;
+        margin-bottom: 4rem;
+    }
+}
