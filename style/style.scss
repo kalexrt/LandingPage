@@ -28,7 +28,7 @@ body{
 img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .header{
@@ -51,12 +51,22 @@ img{
     font-weight: 500;
     cursor: pointer;
     width: 160px;
+    transform: scale(1);
+    transition: $transition-delay;
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 
 .default-icon{
     aspect-ratio: 1;
     width: 24px;
     cursor: pointer;
+    transform: scale(1);
+    transition: $transition-delay;
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 
 .nav-bar{
@@ -234,8 +244,7 @@ img{
             &__links-bar{
                 display: flex;
                 margin-top: 2.6rem;
-                justify-content: space-between;
-
+                gap: 40px;
                 &--default-logo{
                     height: 24px;
                     width: 24px;
@@ -248,3 +257,89 @@ img{
     }
 }
 
+.application-tools{
+    @include flexCenter();
+    flex-direction: column;
+    width: 100%;
+    height: calc(105vh - 5.6rem);
+    .application-title{
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+    }
+    .tool-container{
+        @include flexCenter();
+        flex-wrap: wrap;
+        height: 75%;
+        width: 80%;
+        &__tools{
+            width: 32%;
+            &--icon{
+                height: 100px;
+                aspect-ratio: 1;
+                position: relative;
+            }
+            &--title{
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+            }
+            &--description{
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 190.4%; /* 30.464px */
+                letter-spacing: 0.08px;
+                color: $secondary-text-color;
+            }
+        }
+    }
+    &__load-more{
+        padding: 10px 0;
+        width: 80%;
+        text-align: center;
+        font-family: $special-font;
+        font-size: 15.714px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 146.687%; /* 23.051px */
+        letter-spacing: 0.079px;
+        border-radius: 43px;
+        background-color: $secondary-background;
+        transition: $transition-delay;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+.item--backward{
+    position: absolute;
+    z-index: -1;
+    top:-100px;
+    left:29px;
+}
+
+.footer{
+    width: 100%;
+    background-color: $secondary-background;
+    padding:0 10%;
+    &__get-in-touch{
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 172.687%; /* 69.075px */
+        letter-spacing: 0.2px;
+    }
+    &__email-button{
+        @include flexCenter();
+        justify-content: space-between;
+        padding-bottom: 2rem;
+    }
+    &__link-container{
+        @extend .intro-screen__link-container;
+        margin: 0;
+        padding-bottom: 3rem;
+    }
+}
