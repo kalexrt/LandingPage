@@ -12,6 +12,8 @@
     justify-content: space-around;
     &__left-section{
         @include flexCenter();
+        @include hoverBig();
+        cursor: pointer;
         &--title{
             font-weight: 600;
             font-size: 22px;

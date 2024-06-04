@@ -2,12 +2,29 @@ body{
     font-family: $default-font;
     background-color: var(--background-color);
     color: var(--primary-text-color);
-    scroll-behavior: smooth;
     transition: $transition-delay;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 img{
     height: 100%;
     width: 100%;
     object-fit: contain;
+}
+
+a{
+    text-decoration: inherit;
+    color: inherit;
+}
+
+button{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }

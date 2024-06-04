@@ -61,11 +61,14 @@
             }
             &__links-bar{
                 display: flex;
+                flex-direction: row;
                 margin-top: 2.6rem;
                 gap: 40px;
                 &--default-logo{
                     height: 24px;
                     width: 24px;
+                    cursor: pointer;
+                    @include hoverBig();
                 }
             }
             .default-btn{

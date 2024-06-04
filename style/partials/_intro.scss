@@ -2,8 +2,8 @@
     // height: calc(100vh - 5.6rem);
     @include flexCenter();
     flex-direction: column;
+    padding-top: 4rem;
     &__picture{
-        margin-top: 4rem;
         aspect-ratio: 1;
         height: 64px;
         margin-bottom: 1rem;
