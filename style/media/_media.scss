@@ -79,6 +79,16 @@
                 }
             }
     }
+    .application-tools{
+        padding:3rem 0;
+        height: 90%;
+        .tool-container {
+            height: 60%;
+        }
+        &__load-more{
+            margin-top: 2rem;
+        }
+    } 
 }
 
 

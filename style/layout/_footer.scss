@@ -3,6 +3,7 @@
     background-color: var(--secondary-background);
     padding:0 10%;
     &__get-in-touch{
+        padding-top: 39px;
         font-size: 40px;
         font-style: normal;
         font-weight: 700;
@@ -12,6 +13,7 @@
     &__email-button{
         @include flexCenter();
         justify-content: space-between;
+        padding-top: 1rem;
         padding-bottom: 2rem;
     }
     &__link-container{

@@ -71,6 +71,7 @@
   padding: 0 10%;
 }
 .footer__get-in-touch {
+  padding-top: 39px;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -82,6 +83,7 @@
   justify-content: center;
   align-items: center;
   justify-content: space-between;
+  padding-top: 1rem;
   padding-bottom: 2rem;
 }
 .footer__link-container {
@@ -500,6 +502,16 @@ button {
   }
   .card-screen .card__left-part .default-btn {
     margin-bottom: 120px;
+  }
+  .application-tools {
+    padding: 3rem 0;
+    height: 90%;
+  }
+  .application-tools .tool-container {
+    height: 60%;
+  }
+  .application-tools__load-more {
+    margin-top: 2rem;
   }
 }
 @media screen and (max-width: 575px) {
