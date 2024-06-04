@@ -84,7 +84,6 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
-  padding-bottom: 2rem;
 }
 .footer__link-container {
   margin-bottom: 0;
@@ -370,23 +369,24 @@ button {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: calc(105vh - 5.6rem);
 }
 .application-tools .application-title {
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
+  padding-top: 49px;
+  padding-bottom: 40px;
 }
 .application-tools .tool-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 75%;
   width: 80%;
 }
 .application-tools .tool-container__tools {
   width: 32%;
+  padding-bottom: 4rem;
 }
 .application-tools .tool-container__tools--icon {
   height: 100px;
@@ -416,6 +416,7 @@ button {
   font-weight: 500;
   line-height: 146.687%; /* 23.051px */
   letter-spacing: 0.079px;
+  margin-bottom: 50px;
   border-radius: 43px;
   background-color: var(--secondary-background);
   cursor: pointer;
@@ -442,7 +443,6 @@ button {
   }
   .desktop--border {
     border-bottom: 1px solid #DEDEDE;
-    padding-bottom: 2.5rem;
   }
 }
 @media screen and (min-width: 575px) and (max-width: 875px) {
@@ -506,10 +506,6 @@ button {
   }
   .card-screen .card__left-part .default-btn {
     margin-bottom: 120px;
-  }
-  .application-tools {
-    padding: 3rem 0;
-    height: 90%;
   }
   .application-tools .tool-container {
     height: 60%;
