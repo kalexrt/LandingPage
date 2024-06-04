@@ -440,6 +440,10 @@ button {
   .nav-bar__right-section .mobile--item {
     visibility: hidden;
   }
+  .desktop--border {
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 2.5rem;
+  }
 }
 @media screen and (min-width: 575px) and (max-width: 875px) {
   .nav-bar__right-section__nav-list {
@@ -512,6 +516,10 @@ button {
   }
   .application-tools__load-more {
     margin-top: 2rem;
+  }
+  .desktop--border {
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 2.5rem;
   }
 }
 @media screen and (max-width: 575px) {
