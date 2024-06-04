@@ -35,3 +35,10 @@
     filter: invert(var(--invert));
     @include hoverBig();
 }
+
+
+.p {
+    &__tb {
+        padding: 60px 0;
+    }
+}

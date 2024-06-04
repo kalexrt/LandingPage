@@ -2,7 +2,6 @@
     // height: calc(100vh - 5.6rem);
     @include flexCenter();
     flex-direction: column;
-    padding-top: 4rem;
     &__picture{
         aspect-ratio: 1;
         height: 64px;
@@ -35,7 +34,8 @@
     &__button-container{
         margin-top: 3rem;
         @include flexCenter();
-        width:20%;
+        width:30%;
+        gap: 10px;
         justify-content: space-between;
         .default-btn{
             width: 45%;

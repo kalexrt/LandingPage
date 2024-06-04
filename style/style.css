@@ -61,6 +61,10 @@
   transform: scale(1.1);
 }
 
+.p__tb {
+  padding: 60px 0;
+}
+
 .footer {
   width: 100%;
   background-color: var(--secondary-background);
@@ -292,7 +296,6 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 4rem;
 }
 .intro-screen__picture {
   aspect-ratio: 1;
@@ -328,7 +331,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: 30%;
+  gap: 10px;
   justify-content: space-between;
 }
 .intro-screen__button-container .default-btn {
@@ -427,7 +431,7 @@ button {
   left: 29px;
 }
 
-@media screen and (min-width: 575px) {
+@media screen and (min-width: 875px) {
   .nav-bar__right-section__nav-list {
     visibility: visible;
   }
@@ -435,19 +439,12 @@ button {
     visibility: hidden;
   }
 }
-@media screen and (max-width: 575px) {
-  .header {
-    position: relative;
-  }
-  .nav-bar {
-    margin: 0;
-    padding: 1.1rem 0;
-  }
+@media screen and (min-width: 575px) and (max-width: 875px) {
   .nav-bar__right-section__nav-list {
     visibility: hidden;
   }
   .nav-bar__right-section .theme-toggle--button {
-    left: 12px;
+    left: 33%;
     top: 0;
   }
   .nav-bar__right-section .mobile--item {
@@ -457,25 +454,21 @@ button {
     top: 4px;
   }
   .intro-screen {
-    height: calc(100vh - 4rem);
-  }
-  .intro-screen__greeting {
-    font-size: 16px;
+    padding-top: 0;
   }
   .intro-screen__position {
-    font-size: 24px;
+    font-size: 48px;
   }
   .intro-screen__description {
-    font-size: 14px;
-    width: 90%;
+    width: 70%;
   }
   .intro-screen__button-container {
+    width: 40%;
     font-size: 14px;
-    flex-direction: column;
     gap: 1.5rem;
   }
   .intro-screen__button-container .default-btn {
-    width: 170px;
+    width: 10000rem;
   }
   .intro-screen__button-container .default-text {
     width: 100px;
@@ -485,14 +478,13 @@ button {
   }
   .card-screen .card {
     flex-wrap: wrap;
-    width: 200%;
   }
   .card-screen .card__right-image {
     width: 100%;
   }
   .card-screen .card__right-image .image-modifier {
     object-fit: cover;
-    height: 280px;
+    height: 400px;
   }
   .card-screen .card__left-part {
     display: flex;
@@ -503,73 +495,11 @@ button {
   }
   .card-screen .card__left-part--type-icon {
     position: absolute;
-    top: -270px;
+    top: -350px;
     left: 20px;
-  }
-  .card-screen .card__left-part--name-icon {
-    align-items: center;
-  }
-  .card-screen .card__left-part .left-part-name {
-    font-size: 24px;
-  }
-  .card-screen .card__left-part--description {
-    font-size: 14px;
   }
   .card-screen .card__left-part .default-btn {
     margin-bottom: 120px;
-  }
-  .application-tools {
-    height: auto;
-    justify-content: flex-start;
-  }
-  .application-tools .application-title {
-    font-size: 24px;
-    margin-bottom: 40px;
-  }
-  .application-tools .tool-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-  }
-  .application-tools .tool-container__tools {
-    width: 100%;
-    padding-bottom: 3rem;
-  }
-  .application-tools .tool-container__tools:not(:last-child) {
-    border-bottom: 1px solid #6F7279;
-  }
-  .application-tools .tool-container__tools--title {
-    font-size: 20px;
-    padding-bottom: 1.5rem;
-  }
-  .application-tools .tool-container__tools--description {
-    font-size: 14px;
-    width: 100%;
-  }
-  .application-tools__load-more {
-    margin-bottom: 24px;
-  }
-  .footer__get-in-touch {
-    margin-top: 26px;
-    font-size: 24px;
-  }
-  .footer__email-button {
-    margin-top: 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer__email-button--email {
-    font-size: 14px;
-    margin-bottom: 36px;
-  }
-}
-@media screen and (min-width: 575px) {
-  .nav-bar__right-section__nav-list {
-    visibility: visible;
-  }
-  .nav-bar__right-section .mobile--item {
-    visibility: hidden;
   }
 }
 @media screen and (max-width: 575px) {
@@ -592,9 +522,6 @@ button {
     position: absolute;
     right: 0;
     top: 4px;
-  }
-  .intro-screen {
-    height: calc(100vh - 4rem);
   }
   .intro-screen__greeting {
     font-size: 16px;
