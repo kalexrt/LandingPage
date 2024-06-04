@@ -81,7 +81,13 @@
   padding-bottom: 2rem;
 }
 .footer__link-container {
-  margin: 0;
+  margin-bottom: 0;
+  margin-top: 2.5rem;
+  width: 275px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   padding-bottom: 3rem;
 }
 
@@ -311,7 +317,7 @@ img {
   cursor: pointer;
   margin-left: 4px;
 }
-.intro-screen__link-container, .footer__link-container {
+.intro-screen__link-container {
   margin-top: 2.5rem;
   width: 275px;
   display: flex;

@@ -15,8 +15,12 @@
         padding-bottom: 2rem;
     }
     &__link-container{
-        @extend .intro-screen__link-container;
+        // @extend .intro-screen__link-container;
         margin-bottom: 0;
+        margin-top: 2.5rem;
+        width: 275px;
+        @include flexCenter();
+        justify-content: space-between;
         padding-bottom: 3rem;
     }
 }
